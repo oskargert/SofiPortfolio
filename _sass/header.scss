@@ -1,0 +1,23 @@
+
+.menu{
+    width: var(--page-width);;
+    margin: 0 auto 2vh auto;
+    min-height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+
+
+.menu-item{
+    border: 1px var(--line-color) solid;
+    text-align: center;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.menu-item:hover{
+    border: 1px grey solid;   
+}
+

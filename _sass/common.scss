@@ -1,0 +1,70 @@
+
+html{
+    scroll-behavior: smooth;
+    overflow: scroll;
+    background: var(--background-color);
+}
+
+h1, h2{
+    font-family: var(--title-font);
+    font-size: var(--title-font-size);
+    color: var(--title-color);
+}
+
+h3, h4{
+    font-family: var(--subtitle-font);
+    font-size: var(--subtitle-font-size);
+    color: var(--subtitle-color);
+}
+
+p{
+    font-family: var(--text-font);
+    font-size: var(--text-font-size);
+    color: var(--text-color);
+}
+
+a {
+    color: inherit; 
+    text-decoration: inherit; 
+}
+
+.lightbox-dark{
+    position: absolute;
+    left:0;
+    width: 100%;
+    // background: var(--lightbox-color);
+    z-index: 11;
+
+    max-height: 0%;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.lightbox-dark-open{
+    max-height: 200vh;
+    
+
+    // overflow: scroll;
+}
+
+.lightbox-light{
+    position: relative;
+    width: var(--page-width);
+    margin: 0 auto 0 auto;
+    padding: 5% 1em 5% 1em;
+    opacity: 1;
+    background: var(--background-color);
+
+    max-height: 200vh;
+}
+
+.left-column{
+    max-width: 25%;
+    float: left;
+    margin-right: 1%;
+}
+
+.right-column{
+    max-width: 70%;
+    float: right;
+}
