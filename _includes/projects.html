@@ -1,0 +1,48 @@
+
+<div class="body">
+  {% assign sorted_project = site.projects | sort: 'year' | reverse %}
+  {% for project in sorted_project %}
+  
+    <div class="project-container" >
+    
+        <div class="project-title-container" id='{{ project.id }}' onclick="showProject(this.id)" >
+          <div class="title-subtitle">
+            <!-- <a href="#{{project.id}}"><h1 id="{{project.id}}" class="project-title">{{ project.heading }}</h1></a> -->
+            <!-- <h1 id="{{project.id}}" class="project-title"><a href="#{{project.id}}">{{ project.heading }}</a></h1> -->
+            <h1 id="{{project.id}}" class="project-title">{{ project.heading }}</h1>
+            <h3 class="project-subheading">{{ project.subheading }}</h3>
+          </div>
+          <h1 class="project-year">{{ project.year }}</h1>
+        </div>
+        
+        <br style="clear: both;">
+
+        <div class="closed-content-container" id='{{ project.id }}/section' >
+          <div class="right-column">            
+              <section class="image-container" style="column-count: {{ project.num_image_columns }};" >
+
+              {% if project.video_urls.size != 0 %}
+                {% for url in project.video_urls %}
+                  <div class="video-container">
+                    <iframe class="video" src={{url}} frameborder="0" allowfullscreen></iframe>
+                  </div>
+                {% endfor %}
+              {% endif%}
+
+              {% for image in site.static_files %}
+                {% if image.path contains project.tag %}
+                  <img class="image" src='{{ site.baseurl }}{{ image.path }}'>  
+                {% endif %}
+              {% endfor %}
+            </section>
+          </div>
+  
+          <div class="left-column">
+            <!-- <h2 class="">{{ project.subheading }}</h2> -->
+            <div class="content-text">{{ project.content }}</div>
+          </div>
+        </div>
+      <!-- <hr class="project-divider"> -->
+    </div>
+  {% endfor %}
+</div>
