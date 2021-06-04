@@ -1,0 +1,27 @@
+{% assign page = site.pages | where: 'page', 'about' %}
+{% assign page = page[0] %}
+
+<div class="lightbox-dark lightbox-dark-closed" id='about-lightbox'>
+    <div class="lightbox-light">
+        <div class="about-container">
+            <i onclick="closePages()" class="far fa-window-close"></i>
+            <div class="about-image">
+                {% for image in site.static_files %}
+                    {% if image.path contains page.about_image | default: about %}
+                        <img class="image" src="{{ site.baseurl }}{{ image.path }}" alt="No image">      
+                    {% endif %}
+                {% endfor %}
+                
+            </div>
+            <div class="about-content">
+                <h1>{{page.title}}</h1>
+            {{page.content}}
+    
+            </div>
+            <!-- <br style="clear: both;"> -->
+        </div>
+        
+       
+    </div>
+  
+</div>
