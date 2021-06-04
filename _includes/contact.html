@@ -1,0 +1,42 @@
+{% assign page = site.pages | where: 'page', 'contact' %}
+{% assign page = page[0] %}
+
+<div class="lightbox-dark lightbox-dark-closed" id='contact-lightbox'>
+    <div class="lightbox-light">
+        
+
+        <div class="form-container">
+            <i onclick="closePages()" class="far fa-window-close"></i>
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.content }}</p>
+
+            <form class="form" action="https://formkeep.com/f/906f4582b214">
+            
+                <label for="name">
+                    <span>Name</span>
+                    <input type="text" name="name" required >
+                </label>
+                
+    
+                <label for="email">
+                    <span>Email</span>
+                    <input type="email" id="email-address" name="email" required>
+                </label>
+                
+    
+                <label for="message">
+                    <span>Message</span>
+                    <textarea name="message" id="" cols="30" rows="10" required></textarea>
+                </label>
+
+                <label for="send">
+                    <span></span>
+                    <input type="submit" value="Send">
+                </label>
+                
+                
+            </form>
+        </div>
+        
+    </div>
+</div>
