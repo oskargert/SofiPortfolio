@@ -1,0 +1,42 @@
+{% assign page = site.pages | where: 'page', 'footer' %}
+{% assign page = page[0] %}
+
+<div class="footer-container">
+    <div class="footer-item">
+        <div class="social-media-links">
+            
+            {% if page.facebook_url %}
+                <a href="{{ page.facebook_url }}" class="fab fa-facebook" ></a>
+            {% endif %}
+            {% if page.instagram_url %}
+                <a href="{{ page.instagram_url }}" class="fab fa-instagram" ></a>
+            {% endif %}
+            {% if page.linkedin_url %}
+                <a href="{{ page.linkedin_url }}" class="fab fa-linkedin" ></a>
+            {% endif %}
+            {% if page.twitter_url %}
+                <a href="{{ page.twitter_url }}" class="fab fa-twitter" ></a>
+            {% endif %}
+            {% if page.youtube_url %}
+                <a href="{{ page.youtube_url }}" class="fab fa-youtube" ></a>
+            {% endif %}
+            {% if page.reddit_url %}
+                <a href="{{ page.reddit_url }}" class="fab fa-reddit" ></a>
+            {% endif %}
+            {% if page.snapchat_url %}
+                <a href="{{ page.snapchat_url }}" class="fab fa-snapchat" ></a>
+            {% endif %}
+            {% if page.skype_url %}
+                <a href="{{ page.skype_url }}" class="fab fa-skype" ></a>
+            {% endif %}
+            {% if page.tiktok_url %}
+                <a href="{{ page.tiktok_url }}" class="fab fa-tiktok" ></a>
+
+            {% endif %}
+
+            
+
+            
+        </div>
+    </div>
+</div>
