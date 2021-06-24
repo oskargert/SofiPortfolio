@@ -1,6 +1,7 @@
 ---
 page: about
 about_image: dog.jpg
+cv_file_name: CV_Sofia_Deneke.pdf
 title: "HEEELLO"
 ---
 
