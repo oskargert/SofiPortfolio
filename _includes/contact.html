@@ -1,16 +1,37 @@
-{% assign page = site.pages | where: 'page', 'contact' %}
-{% assign page = page[0] %}
+<!-- {% assign contact = site.pages | where: 'page', 'contact' %}
+{% assign contact = contact[0] %} -->
+<!-- 
+{% assign social = site.pages | where: 'page', 'footer' %}
+{% assign social = social[0] %} -->
 
 <div class="lightbox-dark lightbox-dark-closed" id='contact-lightbox'>
+    
     <div class="lightbox-light">
         
 
-        <div class="form-container">
-            <i onclick="closePages()" class="far fa-window-close"></i>
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.content }}</p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <i onclick="closePages()" class="far fa-window-close fa-window-contact-close"></i>        
+                <h1 >{{ contact.title }}</h1>
+                {% if contact.phone %}
+                
+                <label>Phone:</label>
+                <a href="tel:{{contact.phone}}" > {{ contact.phone }}</a>
+                <br>
+                {% endif %}
+                {% if site.email %}
+                <label>Email:</label>
+                <a href="mailto:{{site.email}}">{{ site.email }}</a>
+                <br>
+                {% endif %}
+                
+                <p>{{ contact.content }}</p>
+            </div>
+            
 
-            <form class="form" action="https://formkeep.com/f/906f4582b214">
+            
+
+            <!-- <form class="form" action="https://formkeep.com/f/906f4582b214">
             
                 <label for="name">
                     <span>Name</span>
@@ -35,7 +56,7 @@
                 </label>
                 
                 
-            </form>
+            </form> -->
         </div>
         
     </div>
