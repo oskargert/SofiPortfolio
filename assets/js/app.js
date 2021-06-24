@@ -18,8 +18,6 @@ window.onload = function () {
     }
 }
 
-
-
 function showProject(id){
     let projectContent = document.getElementById(id+"/section");    
     projectContent.classList.toggle("open-content-container");
@@ -34,17 +32,26 @@ function closeProjects(){
 
 function showPage(id){
     let projectContent = document.getElementById(id);    
+    let footer = document.getElementById("footer-container");   
+
     if(!projectContent.classList.contains("lightbox-dark-open")){
-        closePages();
+        closePages();        
     }
+    document.documentElement.classList.toggle("hide-scroll");
     projectContent.classList.toggle("lightbox-dark-open");
+    footer.classList.toggle("footer-container-absolute");
+    
 }
 
 function closePages(){
     let pages = document.getElementsByClassName("lightbox-dark");
     for (let page of pages) {
         page.classList.remove("lightbox-dark-open");
-    }
+    }    
+    let footer = document.getElementById("footer-container");  
+    footer.classList.remove("footer-container-absolute");
+    document.documentElement.classList.remove("hide-scroll");
+    
 }
 
 function closePagesAndProjects(){
