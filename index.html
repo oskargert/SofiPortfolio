@@ -5,15 +5,20 @@ layout: default
 <!DOCTYPE html>
 <html lang="en">
 
-    {% include head.html %}
-    {% include header.html %}
+    
 
-    {% include about.html %}
-    {% include contact.html %}
+    <body>
+      {% include head.html %}
+      {% include header.html %}
 
-    <body class="container">
-      {% include projects.html %}
+      <div class="container">
+        {% include about.html %}
+        {% include contact.html %}  
+        {% include projects.html %}
+      </div>
+      
+      {% include footer.html %}
     </body>
 
-    {% include footer.html %}
+    
 </html>

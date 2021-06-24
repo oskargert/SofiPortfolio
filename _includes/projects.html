@@ -18,6 +18,12 @@
         <br style="clear: both;">
 
         <div class="closed-content-container" id='{{ project.id }}/section' >
+          
+          <div class="left-column">
+            <!-- <h2 class="">{{ project.subheading }}</h2> -->
+            <div class="content-text">{{ project.content }}</div>
+          </div>
+          
           <div class="right-column">            
               <section class="image-container" style="column-count: {{ project.num_image_columns }};" >
 
@@ -37,10 +43,7 @@
             </section>
           </div>
   
-          <div class="left-column">
-            <!-- <h2 class="">{{ project.subheading }}</h2> -->
-            <div class="content-text">{{ project.content }}</div>
-          </div>
+          
         </div>
       <!-- <hr class="project-divider"> -->
     </div>

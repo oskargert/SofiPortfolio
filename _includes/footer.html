@@ -1,7 +1,8 @@
 {% assign page = site.pages | where: 'page', 'footer' %}
 {% assign page = page[0] %}
 
-<div class="footer-container">
+<div class="footer-container" id="footer-container">
+    
     <div class="footer-item">
         <div class="social-media-links">
             
@@ -32,11 +33,10 @@
             {% if page.tiktok_url %}
                 <a href="{{ page.tiktok_url }}" class="fab fa-tiktok" ></a>
 
-            {% endif %}
-
-            
-
-            
+            {% endif %}  
         </div>
     </div>
+    <div class=devtag>
+            <a href="mailto:oskargert@gmail.com" > Developed by: Oskar Gert </a>
+    </div>  
 </div>
