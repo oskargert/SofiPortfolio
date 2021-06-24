@@ -1,13 +1,25 @@
 .about-container{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    padding-top: 5%;
 }
 
 
 .about-image{
-    width: 30%;
+    width: 40%;
+    padding-right: 5%;
 }
 
 .about-content{
-    width: 50%;
+    width: 100%;
+}
+
+@media only screen and (min-width: 800px){
+
+    .about-container{
+        flex-direction: row;
+        padding-top: 10%;
+    }
 }
