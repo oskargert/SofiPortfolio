@@ -4,9 +4,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    --about-container-padding-top: 0vh;
+    --about-container-padding-top: 5vh;
     padding-top: var(--about-container-padding-top);
-    
 }
 
 
@@ -17,6 +16,7 @@
 
 .about-content{
     width: 100%;
+    
 }
 
 @media only screen and (min-width: 800px){

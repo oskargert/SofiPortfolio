@@ -1,23 +1,3 @@
-window.onload = function () {
-    if (localStorage.getItem("hasCodeRunBefore") === null) {
-        
-        let projectTitles = document.getElementsByClassName("project-title");
-        
-        left = true;
-        Array.from(projectTitles).forEach( (title, index) => {
-            
-            let parentSize = title.parentElement.clientWidth;
-            let titleSize = title.getBoundingClientRect().width 
-            
-            let leftValue = (left) ? Math.floor(Math.random() * ((parentSize/2)-titleSize)) : Math.floor((Math.random() * ((parentSize/2)-titleSize)) + (parentSize/2));
-            left = !left;
-            console.log(leftValue)
-            // title.style.top =  String(verticalSpaceing*(index+1)) + "px";
-            title.style.left = String(leftValue) + "px";
-        });
-    }
-}
-
 function showProject(id){
     let projectContent = document.getElementById(id+"/section");    
     projectContent.classList.toggle("open-content-container");
@@ -31,16 +11,13 @@ function closeProjects(){
 }
 
 function showPage(id){
-    let projectContent = document.getElementById(id);    
-    let footer = document.getElementById("footer-container");   
+    let pageContent = document.getElementById(id);    
 
-    if(!projectContent.classList.contains("lightbox-dark-open")){
+    if(!pageContent.classList.contains("lightbox-dark-open")){
         closePages();        
     }
-    document.documentElement.classList.toggle("hide-scroll");
-    projectContent.classList.toggle("lightbox-dark-open");
-    footer.classList.toggle("footer-container-absolute");
-    
+    pageContent.classList.toggle("lightbox-dark-open");
+    document.getElementById("projects-container").classList.toggle("hide-projects");
 }
 
 function closePages(){
@@ -48,10 +25,7 @@ function closePages(){
     for (let page of pages) {
         page.classList.remove("lightbox-dark-open");
     }    
-    let footer = document.getElementById("footer-container");  
-    footer.classList.remove("footer-container-absolute");
-    document.documentElement.classList.remove("hide-scroll");
-    
+    document.getElementById("projects-container").classList.remove("hide-projects");    
 }
 
 function closePagesAndProjects(){

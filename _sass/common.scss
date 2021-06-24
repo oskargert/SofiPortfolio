@@ -84,14 +84,11 @@ a {
     float: none;
 }
 
-.devtag{
-    font-size: 10pt;
-    opacity: 0.4;
-    text-align: center;
-}
 
 
-.hide-scroll{
+
+.hide-projects{
+    height: 0px;
     overflow: hidden;
 }
 
@@ -139,4 +136,9 @@ a {
     }
 
     
+}
+
+.devtag{
+    opacity: 0.2;
+    text-align: center;
 }
