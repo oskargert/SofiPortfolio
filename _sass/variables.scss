@@ -1,27 +1,39 @@
 
 :root {
     // Title
-   --title-font: Helvetica, Arial, sans-serif;
-   --title-font-size: 24pt;
+   --title-font: syne, Helvetica, Arial, sans-serif; //There are several font names to fall back to if the user doesnt have the first font installed.
+   --title-font-weight: normal;
+   --title-font-size: 28pt;
    --title-color: black;
 
     // Subtitle
-   --subtitle-font: Helvetica, Arial, sans-serif;
-   --subtitle-font-size: 12pt;
+   --subtitle-font: syne, Helvetica, Arial, sans-serif; //There are several font names to fall back to if the user doesnt have the first font installed.
+   --subtitle-font-weight: normal;
+   --subtitle-font-size: 16pt;
    --subtitle-color: black;
 
     // Text
-   --text-font: Helvetica, Arial, sans-serif;
-   --text-font-size: 12pt;
+   --text-font: syne, Helvetica, Arial, sans-serif; //There are several font names to fall back to if the user doesnt have the first font installed.
+   --text-font-weight: normal;
+   --text-font-size: 14pt;
    --text-color: black;
+
+    // Links    
+   --link-font: syne, Helvetica, Arial, sans-serif; //There are several font names to fall back to if the user doesnt have the first font installed.
+   --link-font-weight: normal;
+   --link-font-size: 14pt;
+   --link-color: black;
 
     // Colors
     --background-color: white;
-    --lightbox-color: rgba(0, 0, 0, 0.603);
     --line-color: lightgrey;
     --social-media-icon-color: black;
     --close-button-color: lightgrey;
 
     // 
     --page-width: 80%;
+    --header-height: calc(7vh - 8px);
+    --footer-height: calc(10vh - 8px);
+    --body-min-height: 83vh;
+
 }
