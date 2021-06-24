@@ -1,9 +1,12 @@
 .about-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-top: 5%;
+    --about-container-padding-top: 5%;
+    padding-top: var(--about-container-padding-top);
+    
 }
 
 
@@ -20,6 +23,8 @@
 
     .about-container{
         flex-direction: row;
-        padding-top: 10%;
+        --about-container-padding-top: 10%;
+        padding-top: var(--about-container-padding-top);
+        
     }
 }

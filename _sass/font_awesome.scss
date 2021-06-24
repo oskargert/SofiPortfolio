@@ -18,7 +18,7 @@
 
 .fa-window-close{
     position: absolute;
-    top: 5vh;
+    top: var(--about-container-padding-top);
     right: 0;
     color: var(--close-button-color);
     font-size: 20pt;
@@ -27,6 +27,7 @@
 .fa-window-contact-close{
     
     top: var(--contact-container-padding-top); //Same as contact-container padding
-    right: 35%;
+    right: 0;
     
 }
+

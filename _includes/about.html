@@ -4,9 +4,9 @@
 <div class="lightbox-dark lightbox-dark-closed" id='about-lightbox'>
     
     <div class="lightbox-light">
-        <i onclick="closePages()" class="far fa-window-close"></i>
+        
         <div class="about-container">
-            
+            <i onclick="closePages()" class="far fa-window-close"></i>
             <div class="about-image">
                 {% for image in site.static_files %}
                     {% if image.path contains page.about_image | default: about %}
