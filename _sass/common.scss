@@ -9,14 +9,14 @@ html{
 h1, h2{
     font-family: var(--title-font);
     font-weight: var(--title-font-weight);
-    font-size: calc(var(--title-font-size) * 0.8);
+    font-size: calc(var(--title-font-size) * 0.6);
     color: var(--title-color);
 }
 
 h3, h4{
     font-family: var(--subtitle-font);
     font-weight: var(--subtitle-font-weight);
-    font-size: calc(var(--subtitle-font-size) * 0.8);
+    font-size: calc(var(--subtitle-font-size) * 0.6);
     color: var(--subtitle-color);
 }
 
@@ -90,6 +90,18 @@ a {
 .hide-projects{
     height: 0px;
     overflow: hidden;
+}
+
+@media only screen and (min-width: 600px){
+    
+    h1, h2{
+        font-size: calc(var(--title-font-size) * 0.8);
+    }
+
+    h3, h4{
+        font-size: calc(var(--subtitle-font-size) * 0.8);
+    }
+
 }
 
 @media only screen and (min-width: 1200px){
