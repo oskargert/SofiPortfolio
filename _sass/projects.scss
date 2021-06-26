@@ -3,11 +3,12 @@
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1.2s ease-in-out;
+    transition: max-height 0.7s ease-in-out;
 }
 
 .show-projects{
-    max-height: 1000vh;    
+    max-height: 1000vh;   
+    transition: max-height 1.2s ease-in-out; 
 }
 
 
@@ -23,9 +24,13 @@
     content: "";
     position: absolute;
     left: 0;
-    right: 0px;
+    right: 0;
     bottom: 0;
     border-bottom: 1px solid var(--line-color);
+}
+
+.project-container:hover{
+    border-bottom: 1px solid var(--hover-and-selected-color);
 }
 
 .image-container {

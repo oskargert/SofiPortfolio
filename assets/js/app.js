@@ -11,13 +11,16 @@ function closeProjects(){
 }
 
 function showPage(id){
-    let pageContent = document.getElementById(id);    
+    
+    let pageContent = document.getElementById(id + "-page");    
+    let navButton = document.getElementById(id + "-nav");    
 
     if(!pageContent.classList.contains("page-open")){
         closePages();        
     }
     document.getElementById("projects-container").classList.toggle("show-projects");
     pageContent.classList.toggle("page-open");  
+    navButton.classList.toggle("selected");
 }
 
 function closePages(){
@@ -25,6 +28,10 @@ function closePages(){
     for (let page of pages) {
         page.classList.remove("page-open");
     }    
+    let menuItems = document.getElementsByClassName("menu-item");
+    for (let menuItem of menuItems) {
+        menuItem.classList.remove("selected");
+    }
     document.getElementById("projects-container").classList.add("show-projects");    
 }
 
