@@ -1,3 +1,16 @@
+.projects{
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease-in-out;
+}
+
+.show-projects{
+    max-height: 1000vh;    
+}
+
+
 .project-container{
     width: var(--page-width);;
     padding: 0px 1% 10px 1%;
@@ -77,7 +90,7 @@
 .content-text{
 }
 
-.closed-content-container{
+.content-container{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.8s ease-in-out;

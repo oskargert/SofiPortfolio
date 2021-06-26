@@ -4,7 +4,7 @@ function showProject(id){
 }
 
 function closeProjects(){
-    let pages = document.getElementsByClassName("closed-content-container");
+    let pages = document.getElementsByClassName("content-container");
     for (let page of pages) {
         page.classList.remove("open-content-container");
     }
@@ -13,19 +13,19 @@ function closeProjects(){
 function showPage(id){
     let pageContent = document.getElementById(id);    
 
-    if(!pageContent.classList.contains("lightbox-dark-open")){
+    if(!pageContent.classList.contains("page-open")){
         closePages();        
     }
-    pageContent.classList.toggle("lightbox-dark-open");
-    document.getElementById("projects-container").classList.toggle("hide-projects");
+    document.getElementById("projects-container").classList.toggle("show-projects");
+    pageContent.classList.toggle("page-open");  
 }
 
 function closePages(){
-    let pages = document.getElementsByClassName("lightbox-dark");
+    let pages = document.getElementsByClassName("page");
     for (let page of pages) {
-        page.classList.remove("lightbox-dark-open");
+        page.classList.remove("page-open");
     }    
-    document.getElementById("projects-container").classList.remove("hide-projects");    
+    document.getElementById("projects-container").classList.add("show-projects");    
 }
 
 function closePagesAndProjects(){

@@ -1,5 +1,5 @@
 
-<div class="body" id="projects-container"> 
+<div class="projects show-projects" id="projects-container"> 
   {% assign sorted_project = site.projects | sort: 'year' | reverse %}
   {% for project in sorted_project %}
   
@@ -17,7 +17,7 @@
         
         <br style="clear: both;">
 
-        <div class="closed-content-container" id='{{ project.id }}/section' >
+        <div class="content-container" id='{{ project.id }}/section' >
           
           <div class="left-column">
             <!-- <h2 class="">{{ project.subheading }}</h2> -->

@@ -35,42 +35,25 @@ a {
 }
 
 .body{
-    display: flex;
-    flex-direction: column;
-    min-height: var(--body-min-height);
-    
+    min-height: var(--body-min-height);   
 }
 
-.lightbox-dark{
-    position: absolute;
-    left:0;
-    width: 100%;
+.page{
+    width: var(--page-width);
     background: var(--background-color);
-    z-index: 11;
 
-    max-height: 0%;
+    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.8s ease-in-out;
-}
+    transition: max-height 0.5s ease-in-out;
 
-.lightbox-dark-open{
-    max-height: 200vh;
-}
-
-.lightbox-light{
-    position: relative;
-        opacity: 1;
-    background: var(--background-color);
-
-    min-height: var(--body-min-height);
-    max-height: 200vh;
-    
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin: 0 auto 0 auto ;
-    width: var(--page-width);
+}
 
+.page-open{
+    max-height: 200vh;
 }
 
 .left-column{
@@ -82,14 +65,6 @@ a {
 .right-column{
     max-width: 100%;
     float: none;
-}
-
-
-
-
-.hide-projects{
-    height: 0px;
-    overflow: hidden;
 }
 
 @media only screen and (min-width: 600px){
